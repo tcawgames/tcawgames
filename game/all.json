@@ -279,6 +279,14 @@
         "url": "https://tcaw-games.glitch.me/cluster-rush.html",
         "img": "cluster-rush.png",
         "order": 7
+    },
+     {
+        "slug": "retro-bowl",
+        "title": "Retro Bowl",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/retro-bowl.html",
+        "img": "retro-bowl.png",
+        "order": 36
     }
 
 
