@@ -287,6 +287,14 @@
         "url": "https://tcaw-games.glitch.me/retro-bowl.html",
         "img": "retro-bowl.png",
         "order": 10
+    },
+       {
+        "slug": "madalin-stunt-cars-3",
+        "title": "Madalin Stunt Cars 3",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/madalin-stunt-cars-3.html",
+        "img": "madalin-stunt-cars-3.png",
+        "order": 36
     }
 
 
