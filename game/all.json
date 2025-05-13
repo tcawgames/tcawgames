@@ -288,13 +288,29 @@
         "img": "retro-bowl.png",
         "order": 10
     },
-       {
+    {
         "slug": "madalin-stunt-cars-3",
         "title": "Madalin Stunt Cars 3",
         "cat": "New",
         "url": "https://tcaw-games.glitch.me/madalin-stunt-cars-3.html",
         "img": "madalin-stunt-cars-3.png",
         "order": 36
+    },
+    {
+        "slug": "drift-boss",
+        "title": "Drift Boss",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/drift-boss.html",
+        "img": "drift-boss.png",
+        "order": 37
+    },
+      {
+        "slug": "scrap-metal-3",
+        "title": "Scrap Metal 3",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/scrap-metal-3.html",
+        "img": "scrap-metal-3.png",
+        "order": 38
     }
 
 
