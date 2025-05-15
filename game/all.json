@@ -311,6 +311,14 @@
         "url": "https://tcaw-games.glitch.me/scrap-metal-3.html",
         "img": "scrap-metal-3.png",
         "order": 38
+    },
+      {
+        "slug": "gladihoppers",
+        "title": "Gladihoppers",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/gladihoppers.html",
+        "img": "gladihoppers.png",
+        "order": 39
     }
 
 

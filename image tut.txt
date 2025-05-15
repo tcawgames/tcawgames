@@ -1,6 +1,6 @@
 refresh && mkdir -p images/logo && curl "YOUR_URL" > images/logo/tombofthemask.png
 
-refresh && mkdir -p images/logo && curl "https://cdn.glitch.global/e2dab6ae-b52c-4720-8886-3f9d99995e26/54e1115e-f6ad-4b31-a43c-67fa9e287ac0.image.png?v=1747096680752" > images/logo/scrap-metal-3.png
+refresh && mkdir -p images/logo && curl "https://cdn.glitch.global/e2dab6ae-b52c-4720-8886-3f9d99995e26/a5794d7c-abbc-47b1-b527-1d772e03f312.image.png?v=1747322870058" > images/logo/gladihoppers.png
 
 
 
