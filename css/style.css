@@ -750,3 +750,7 @@ input.form-control {
 .gamelist-widget .list-game {
   margin-bottom: 20px;
 }
+.game-title {
+  color: #fff !important;
+  font-family: 'Poppins', sans-serif;
+}

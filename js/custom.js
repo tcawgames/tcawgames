@@ -76,6 +76,9 @@ function loadAllGame(dataJson) {
                         <div class="game-item">
                             <div class="list-game">
                                 <div class="list-thumbnail"><img src="${img}" class="lazyload" alt="${title}"></div>
+                                <div class="game-title" style="text-align:center; margin-top: 5px; font-weight: bold;">
+                                    ${title}
+                                </div>
                             </div>
                         </div>
                     </a>
