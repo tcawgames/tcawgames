@@ -13,17 +13,21 @@ function search_games() {
     let input = document.getElementById("searchInput").value;
     input = input.toLowerCase();
     let gameItems = document.getElementsByClassName("game-item");
-    
+
     if (input === '') {
         // If search is empty, show all games
         for (let i = 0; i < gameItems.length; i++) {
             gameItems[i].parentElement.parentElement.style.display = "block";
         }
+        const noResultsElement = document.getElementById("noResultsMessage");
+        if (noResultsElement) {
+            noResultsElement.style.display = "none";
+        }
         return;
     }
 
     let foundResults = false;
-    
+
     for (let i = 0; i < gameItems.length; i++) {
         const gameTitle = gameItems[i].querySelector('.list-thumbnail img').alt.toLowerCase();
         if (!gameTitle.includes(input)) {
@@ -64,7 +68,7 @@ function loadAllGame(dataJson) {
         allGames = sortByOrder(data);
         const listgameElement = document.getElementById('listgame');
         listgameElement.innerHTML = ''; // Clear previous content
-        
+
         for (let j = allGames.length - 1; j >= 0; j--) {
             const item = allGames[j];
             const img = "/images/logo/" + item.img;
@@ -87,13 +91,8 @@ function loadAllGame(dataJson) {
             listgameElement.insertAdjacentHTML('beforeend', htmlItem);
         }
 
-        // Initialize search event listeners after games are loaded
-        document.getElementById('searchButton').addEventListener('click', search_games);
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                search_games();
-            }
-        });
+        // Automatically filter results as the user types
+        document.getElementById('searchInput').addEventListener('input', search_games);
     });
 }
 

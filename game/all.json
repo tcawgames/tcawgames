@@ -319,6 +319,14 @@
         "url": "https://tcaw-games.glitch.me/gladihoppers.html",
         "img": "gladihoppers.png",
         "order": 39
+    },
+    {
+        "slug": "basket-bros",
+        "title": "Basket Bros",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/basket-bros.html",
+        "img": "basket-bros.png",
+        "order": 39
     }
 
 
