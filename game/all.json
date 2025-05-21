@@ -327,6 +327,14 @@
         "url": "https://tcaw-games.glitch.me/basket-bros.html",
         "img": "basket-bros.png",
         "order": 39
+    },
+     {
+        "slug": "fruit-ninja",
+        "title": "Fruit Ninja",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/fruit-ninja.html",
+        "img": "fruit-ninja.png",
+        "order": 40
     }
 
 
