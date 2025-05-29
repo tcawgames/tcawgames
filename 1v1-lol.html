@@ -53,6 +53,8 @@
     <link rel="stylesheet" href="../css/custom.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.png" />
 
@@ -67,19 +69,7 @@
 
     <!-- Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6360932072551114" crossorigin="anonymous"></script>
-
-    <!-- WG Universal Tag (Rewarded Ad System) -->
-    <script type="text/javascript" async>
-      !function(e,t){
-        var a=e.createElement("script"),
-            m=e.getElementsByTagName("script")[0];
-        a.async=1;
-        a.src=t;
-        m.parentNode.insertBefore(a,m)
-      }(document,"https://universal.wgplayer.com/tag/?lh=play.wgplayground.com&wp=/game/testing-environment/&ws=");
-    </script>
   </head>
-
   <body id="page-top" style="background: url('../images/background1.png'); background-size: cover;">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav"></nav>
@@ -94,9 +84,7 @@
                 <div id="mobile-back-button" draggable="true">
                   <i class="bi bi-x-circle-fill"></i>
                 </div>
-                <!-- Game will load here -->
-                <div id="ad-status" style="padding: 20px; font-weight: bold; text-align: center;">Loading ad... please wait.</div>
-                <iframe class="game-iframe" id="game-area" src="" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen style="display:none;"></iframe>
+                <iframe class="game-iframe" id="game-area" src="https://snow-rider-3d.io/game/1v1-lol-3/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
             <div class="game-info">
@@ -123,9 +111,13 @@
     <div class="banner-ad-wrapper">
       <div class="banner-ad-content" style="padding: 20px 0; text-align: center;"></div>
     </div>
+
+ 
+
     <div class="banner-ad-wrapper">
       <div class="banner-ad-content" style="padding: 20px 0; text-align: center;"></div>
     </div>
+
     <div class="footer-copyright py-4" id="load_footer"></div>
 
     <!-- Scripts -->
@@ -139,43 +131,6 @@
       $(function() {
         $("#mainNav").load("/layout/nav.html");
         $("#load_footer").load("/layout/footer.html");
-      });
-
-      // Rewarded Ad Callbacks
-      function OnReadyMethod() {
-        document.getElementById("ad-status").innerText = "Ad ready... showing now.";
-        window[window.preroll.config.loaderObjectName].showRewardAd();
-      }
-
-      function OnSuccessMethod() {
-        document.getElementById("ad-status").style.display = "none";
-        const iframe = document.getElementById("game-area");
-        iframe.src = "https://snow-rider-3d.io/game/1v1-lol-3/";
-        iframe.style.display = "block";
-      }
-
-      function OnFailMethod() {
-        document.getElementById("ad-status").innerText = "You must watch the ad to play the game.";
-      }
-
-      // Wait for WG loader, then register reward callbacks
-      window.addEventListener("load", function () {
-        let attempts = 0;
-        function tryRegister() {
-          const loader = window?.preroll?.config?.loaderObjectName;
-          if (loader && window[loader]) {
-            window[loader].registerRewardCallbacks({
-              onReady: OnReadyMethod,
-              onSuccess: OnSuccessMethod,
-              onFail: OnFailMethod
-            });
-          } else if (attempts++ < 15) {
-            setTimeout(tryRegister, 500);
-          } else {
-            document.getElementById("ad-status").innerText = "Ad failed to load. Try refreshing.";
-          }
-        }
-        tryRegister();
       });
     </script>
   </body>

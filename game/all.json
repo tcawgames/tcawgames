@@ -359,7 +359,16 @@
         "url": "https://tcaw-games.glitch.me/paper-io-2.html",
         "img": "paper-io-2.png",
         "order": 43
+    },
+      {
+        "slug": "cash-clicker",
+        "title": "Cash Clicker",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "cash-clicker.png",
+        "order": 44
     }
+
 
 
 
