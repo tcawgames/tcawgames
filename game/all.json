@@ -350,7 +350,7 @@
         "cat": "New",
         "url": "https://tcaw-games.glitch.me/basket-random.html",
         "img": "basket-random.png",
-        "order": 42
+        "order": 20
     },
     {
         "slug": "paper-io-2",
@@ -407,7 +407,16 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "soccercapsleague.png",
         "order": 47
+    },
+         {
+        "slug": "soccer-random",
+        "title": "Soccer Random",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "soccer-random.png",
+        "order": 32
     }
+
 
 
 
