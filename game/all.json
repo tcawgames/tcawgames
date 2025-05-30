@@ -375,6 +375,14 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "kingkongkart.png",
         "order": 45
+    },
+        {
+        "slug": "fall-friends",
+        "title": "Fall Friends",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "fallfriends.png",
+        "order": 20
     }
 
 
