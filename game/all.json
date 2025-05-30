@@ -391,8 +391,23 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "realisticgtracing.png",
         "order": 35
+    },
+        {
+        "slug": "water-sort-puzzle",
+        "title": "Water Sort Puzzle",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "watersortpuzzle.png",
+        "order": 46
+    },
+       {
+        "slug": "soccercapsleague",
+        "title": "Soccer Caps League",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "soccercapsleague.png",
+        "order": 47
     }
-
 
 
 
