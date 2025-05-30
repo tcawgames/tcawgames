@@ -367,6 +367,14 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "cash-clicker.png",
         "order": 44
+    },
+      {
+        "slug": "king-kong-racing",
+        "title": "King Kong Racing",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "kingkongkart.png",
+        "order": 45
     }
 
 
