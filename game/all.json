@@ -373,7 +373,7 @@
         "title": "King Kong Racing",
         "cat": "New",
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
-        "img": "kingkongkart.png",
+        "img": "kingkongracing.png",
         "order": 45
     },
         {
@@ -383,6 +383,14 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "fallfriends.png",
         "order": 20
+    },
+          {
+        "slug": "real-gt-racing",
+        "title": "Real GT Racing Simulator",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "realisticgtracing.png",
+        "order": 35
     }
 
 

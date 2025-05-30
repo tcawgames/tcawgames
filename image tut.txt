@@ -1,6 +1,6 @@
 refresh && mkdir -p images/logo && curl "YOUR_URL" > images/logo/tombofthemask.png
 
-refresh && mkdir -p images/logo && curl "https://scout.wgimager.com/f_jpg/w_800/h_600/q_90/https://static.wgplayground.com/edbdbe6113ef40491cef13506fc2d106/wgplayground/81374ab657a96499daee6a7541f44bee.png" > images/logo/fallfriends.png
+refresh && mkdir -p images/logo && curl "https://cdn.glitch.global/e2dab6ae-b52c-4720-8886-3f9d99995e26/56b9ca1f-298f-470d-8c29-f2e0e875255b.image.png?v=1748643515185" > images/logo/realisticgtracing.png
 
 
 
