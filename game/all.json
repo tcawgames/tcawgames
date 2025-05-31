@@ -415,7 +415,57 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "soccer-random.png",
         "order": 32
+    },
+     {
+        "slug": "brain-test-tricky-puzzles",
+        "title": "Brain Test: Tricky Puzzles",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "brain-test-tricky-puzzles.png",
+        "order": 48
+    },
+  {
+        "slug": "cat-gardener",
+        "title": "Island Farm: Cat Gardener",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "cat-gardener.png",
+        "order": 49
+    },
+   {
+        "slug": "save-the-doge",
+        "title": "Save The Doge",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "save-the-doge.png",
+        "order": 50
+    },
+   {
+        "slug": "flappy-dunk",
+        "title": "Flappy Dunk",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "flappy-dunk.png",
+        "order": 45
+    },
+     {
+        "slug": "stack-ball-3d",
+        "title": "Stack Ball 3D",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "stack-ball-3d.png",
+        "order": 51
+    },
+      {
+        "slug": "bullet-bros",
+        "title": "Bullet Bros",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "bullet-bros.png",
+        "order": 52
     }
+
+
 
 
 
