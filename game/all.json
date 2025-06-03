@@ -479,7 +479,24 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "golf-mini.png",
         "order": 54
+    },
+      {
+        "slug": "tanks-blitz",
+        "title": "Tanks Blitz",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "tanks-blitz.png",
+        "order": 13
+    },
+   {
+        "slug": "fast-food-empire",
+        "title": "Fast Food Empire",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "fast-food-empire.png",
+        "order": 20
     }
+
 
 
 
