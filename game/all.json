@@ -471,7 +471,16 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "bottle-flip-3d.png",
         "order": 53
+    },
+       {
+        "slug": "golf-mini",
+        "title": "Golf Mini",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "bottle-flip-3d.png",
+        "order": 54
     }
+
 
 
 
