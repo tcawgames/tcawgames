@@ -350,7 +350,7 @@
         "cat": "New",
         "url": "https://tcaw-games.glitch.me/basket-random.html",
         "img": "basket-random.png",
-        "order": 20
+        "order": 3
     },
     {
         "slug": "paper-io-2",
@@ -414,7 +414,7 @@
         "cat": "New",
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "soccer-random.png",
-        "order": 32
+        "order": 4
     },
      {
         "slug": "brain-test-tricky-puzzles",
@@ -462,7 +462,7 @@
         "cat": "New",
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "bullet-bros.png",
-        "order": 52
+        "order": 23
     },
      {
         "slug": "bottle-flip-3d",
@@ -470,7 +470,7 @@
         "cat": "New",
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "bottle-flip-3d.png",
-        "order": 53
+        "order": 12
     },
        {
         "slug": "golf-mini",
@@ -495,6 +495,14 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "fast-food-empire.png",
         "order": 20
+    },
+     {
+        "slug": "age-of-tanks",
+        "title": "Age Of Tanks",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "age-of-tanks.png",
+        "order": 17
     }
 
 
