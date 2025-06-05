@@ -511,6 +511,14 @@
         "url": "https://tcaw-games.glitch.me/cash-clicker.html",
         "img": "firegirl-and-waterboy.png",
         "order": 11
+    },
+   {
+        "slug": "dont-fall-io",
+        "title": "Dontfall.io",
+        "cat": "New",
+        "url": "https://tcaw-games.glitch.me/cash-clicker.html",
+        "img": "dont-fall-io.png",
+        "order": 17
     }
 
 
