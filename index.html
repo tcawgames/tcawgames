@@ -1,173 +1,247 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Tcaw Games</title>
-    <meta name="description" content="Play Unblocked Games Online!">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery-comments.css" />
-    <link rel="stylesheet" type="text/css" href="css/user.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/custom.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-    <!-- Font Awesome icons (free version)-->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Tcaw Games</title>
+  <meta name="description" content="Play Unblocked Games Online!">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-comments.css" />
+  <link rel="stylesheet" type="text/css" href="css/user.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/images/favicon.png" />
 
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="/images/favicon.png" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6360932072551114"
-    crossorigin="anonymous"></script>
+  <style>
+    /* Popup overlay */
+    #move-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
 
-    <style>
-        /* Announcement banner styles */
-        .announcement-banner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #333;
-            color: #fff;
-            padding: 15px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            position: relative;
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
-            margin: 0; /* remove gap below navbar */
-        }
+    .popup-content {
+      background: rgba(20, 20, 20, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
 
-        .announcement-banner.fade-out {
-            opacity: 0;
-        }
+    .popup-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
 
-        .announcement-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: #ffcc00;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
+    .popup-content p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
 
-        .announcement-content {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: center;
-            gap: 15px;
-            max-width: 1000px;
-        }
+    .popup-content a {
+      color: #00ccff;
+      text-decoration: underline;
+      font-weight: bold;
+    }
 
-        .announcement-banner img {
-            height: 50px;
-            flex-shrink: 0;
-        }
+    .popup-btn {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 10px 25px;
+      margin-top: 25px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
 
-        .announcement-text {
-            font-size: 20px;
-            white-space: normal;
-            word-break: break-word;
-        }
+    .popup-btn:hover {
+      background: #ffe066;
+    }
 
-        .close-btn {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 24px;
-            cursor: pointer;
-            position: absolute;
-            top: 10px;
-            right: 15px;
-        }
+    /* Blur effect for background */
+    body.blurred > *:not(#move-popup) {
+      filter: blur(10px);
+      pointer-events: none;
+      user-select: none;
+    }
 
-        .hidden {
-            display: none;
-        }
+    /* Announcement banner */
+    .announcement-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+      margin: 0;
+    }
 
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .announcement-text {
-                font-size: 16px;
-            }
-            .announcement-banner img {
-                height: 40px;
-            }
-        }
-    </style>
+    .announcement-banner.fade-out {
+      opacity: 0;
+    }
+
+    .announcement-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffcc00;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .announcement-content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      gap: 15px;
+      max-width: 1000px;
+    }
+
+    .announcement-banner img {
+      height: 50px;
+      flex-shrink: 0;
+    }
+
+    .announcement-text {
+      font-size: 20px;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .announcement-text {
+        font-size: 16px;
+      }
+      .announcement-banner img {
+        height: 40px;
+      }
+    }
+  </style>
 </head>
-<body id="page-top" style="background: url('images/background1.png'); background-size: cover;">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav"></nav>
-    <!-- End Navigation-->
 
-    <!-- Announcement Banner -->
-    <div id="announcement-banner" class="announcement-banner">
-        <div class="announcement-title">Announcement</div>
-        <div class="announcement-content">
-            <img src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f929.gif" alt="Banner GIF">
-            <span class="announcement-text">
-                Fixed Some Issues And Also New Games Will Be Added This Upcoming School Year!
-            </span>
-        </div>
-        <button class="close-btn" onclick="closeBanner()">✖</button>
+<body id="page-top" style="background: url('images/background1.png'); background-size: cover;" class="blurred">
+
+  <!-- Popup Overlay -->
+  <div id="move-popup">
+    <div class="popup-content">
+      <h2>We moved!</h2>
+      <p>
+        Tcaw Games has moved to <a href="https://tclaws.xyz" target="_blank">tclaws.xyz</a>.<br><br>
+        <b>Our new site is unblocked (if you are coming from the site launcher GUI bookmark)</b> and
+        <b>works with most flaggers/blockers</b>.<br><br>
+        This is our legacy site and is now inactive. This site will only receive minor bug fixes.
+      </p>
+      <button class="popup-btn" onclick="closePopup()">Enter Legacy Site</button>
     </div>
+  </div>
 
-    <div class="container">
-        <!-- Popular games section List game -->
-        <h3 class="section-title">All Games</h3>
-        <div class="row grid-container" id="listgame">
-            <div class="banner-ad-wrapper">
-                <div class="banner-ad-content" style="padding: 20px 0; text-align: center;">
-                <!-- ads -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6360932072551114" crossorigin="anonymous"></script>
-              </div>
-            </div>
-        </div> <!-- end Poplular List game-->
-    </div> <!-- end container -->
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav"></nav>
 
-    <!-- Footer -->
-    <div class="footer-copyright py-4" id="load_footer"></div>
-    <script type="text/javascript" src="js/jquery-3.6.2.min.js"></script>
-    <script type="text/javascript" src="js/lazysizes.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script>
-        $(function() {
-            /* Load file Navigation dùng chung */
-            $("#mainNav").load("/layout/nav.html");
-            /* Load file footer dùng chung */
-            $("#load_footer").load("/layout/footer.html");
-        });
+  <!-- Announcement Banner -->
+  <div id="announcement-banner" class="announcement-banner">
+    <div class="announcement-title">We Moved!</div>
+    <div class="announcement-content">
+      <img src="https://i.ibb.co/LhZKQrmb/c8264172074eb50241381061719391-unscreen.gif" alt="Moving GIF">
+      <span class="announcement-text">
+        Tcaw Games has moved to <a href="https://tclaws.xyz" target="_blank" style="color:#00ccff; text-decoration:underline;">tclaws.xyz</a>!  
+        This is now our legacy site and will only receive small updates.
+      </span>
+    </div>
+    <button class="close-btn" onclick="closeBanner()">✖</button>
+  </div>
 
-        // Banner logic with fade-out and persistence
-        const banner = document.getElementById('announcement-banner');
-        const storageKey = 'bannerClosedTime';
+  <div class="container">
+    <h3 class="section-title">All Games</h3>
+    <div class="row grid-container" id="listgame">
+      <div class="banner-ad-wrapper">
+        <div class="banner-ad-content" style="padding: 20px 0; text-align: center;">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6360932072551114" crossorigin="anonymous"></script>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        function closeBanner() {
-            banner.classList.add('fade-out');
-            setTimeout(() => {
-                banner.classList.add('hidden');
-            }, 500); // match transition duration
-            const expiryTime = Date.now() + (2 * 60 * 60 * 1000); // 2 hours
-            localStorage.setItem(storageKey, expiryTime);
-        }
+  <div class="footer-copyright py-4" id="load_footer"></div>
 
-        function checkBanner() {
-            const closedTime = localStorage.getItem(storageKey);
-            if (closedTime && Date.now() < closedTime) {
-                banner.classList.add('hidden');
-            }
-        }
+  <script type="text/javascript" src="js/jquery-3.6.2.min.js"></script>
+  <script type="text/javascript" src="js/lazysizes.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <script>
+    $(function() {
+      $("#mainNav").load("/layout/nav.html");
+      $("#load_footer").load("/layout/footer.html");
+    });
 
-        checkBanner();
-    </script>
+    // Popup logic
+    function closePopup() {
+      document.getElementById('move-popup').style.display = 'none';
+      document.body.classList.remove('blurred');
+    }
+
+    // Banner logic
+    const banner = document.getElementById('announcement-banner');
+    const storageKey = 'bannerClosedTime';
+
+    function closeBanner() {
+      banner.classList.add('fade-out');
+      setTimeout(() => banner.classList.add('hidden'), 500);
+      const expiryTime = Date.now() + (2 * 60 * 60 * 1000);
+      localStorage.setItem(storageKey, expiryTime);
+    }
+
+    function checkBanner() {
+      const closedTime = localStorage.getItem(storageKey);
+      if (closedTime && Date.now() < closedTime) {
+        banner.classList.add('hidden');
+      }
+    }
+
+    checkBanner();
+  </script>
 </body>
 </html>
